@@ -1,0 +1,172 @@
+
+【android入门，QQMail用到的知识点】
+
+1. 展示“Hello world”
+目的：了解eclipse开发Android app环境；android项目文件结构；
+要点：
+. 下载源代码，文档，demo（由于网络限制，不能下载）
+. 模拟器的建立，能在上跑
+. 能在真机上跑
+
+
+输出：在手机启动app，显示"Hello world"
+
+
+并且能回答以下问题：
+1. project的文件夹src，gen，res，以及配置文件AndroidManifest.xml，project.properties作用
+2. 入口“main”在哪里
+3. UI界面与逻辑代码，如何分割；如果要显示"QQMail Android"，怎么在原有代码修改？
+
+
+
+附录：一些开发常用操作：
+. 代码使用Utf8编码
+  Project -> Properties --> Text file encoding修改为UTF-8、
+
+. 快捷键增修改
+  Window --> Properties --> General --> Keys
+
+. 排版代码
+  Source --> Format (Ctrl+Shift+H)
+
+. 自动整理import
+  Source --> Organize Imports (Ctrl+Shift+O)
+
+. 代码跳转
+  Ctrl+点击
+  Alt+Left
+  Alt+Right
+
+. 查找字符串：
+  Search --> Search... (Ctrl+H)
+
+. 找到函数或变量被使用的地方：
+  Search --> References --> Project (或者References --> Project)
+
+
+
+1.1 对1的结果，试用常用命令
+目的：使用adb做一些常用操作；了解app在手机的目录结构
+要点：
+. 执行adb devices，说说结果是什么意思
+. 执行adb kill-server，用于连接机器出现问题
+. 执行adb uninstall com.example.helloworld（上面app的名称）
+. 执行adb install HelloWorld.apk（上面app的名称）
+. 执行adb shell
+  . cd /data/data; ls，说说结果是什么意思
+  . 如何进入上面1的app，看看里面目录有哪些，存放什么数据（需要手机root）
+  . 常用的linux命令：pwd（获取当前目录）, ls，chmod（修改读写权限）
+. adb push，把pc的一个文件拷贝到手机里
+. adb pull， 把手机的文件拷贝到pc
+
+
+. 试用DDMS工具，ADB的可视化工具
+
+
+
+1.2 在1基础上，补全Activity的生命周期接口onCreate, onRestart, onStart, onResume, onPause, onStop, onDestroy，并打logcat日志
+目的：Logcat日志的使用；Activity生命周期
+
+实验后，需要回答：
+1. 从icon第一次启动app，生命周期接口调用顺序
+2. 按返回，又如何
+3. 再按icon，又如何
+
+
+
+1.3 在1.2基础上，新增两个activity，并在这三个activity上面增加3个按钮，跳到其他activity；log上能显示；还有一个按钮是返回，从哪个activity切换来的
+目的：Intent使用；匿名类使用；事件的了解；Activity.finish；Activity的堆栈；Activity生命周期；
+要点：返回键（back)，主页键（home），究竟返回到那个activity
+
+输出：显示有三个页面
+Activity1
+ btn_goto_activity2
+ btn_goto_activity3
+ back_to_activity(2|3) 具体是从哪里调进来
+
+Activity2
+ btn_goto_activity1
+ btn_goto_activity3
+ back_to_activity(1|3) 具体是从哪里调进来
+
+Activity3
+ btn_goto_activity1
+ btn_goto_activity2
+ back_to_activity(1|2) 具体是从哪里调进来
+
+实验后，需要回答：生命周期接口调用顺序
+
+
+
+1.4 在1.3基础上，选择其中一个activity，增加ListView，显示：
+Activity1
+ btn_goto_activity2
+ btn_goto_activity3
+ back_to_activity(2|3) 具体是从哪里调进来
+Label1
+ Item1.1
+ Item1.2
+Label2
+  Item2.1
+  Item2.2
+ ...
+Label20
+  Item20.1
+  Item20.2
+并且Label不接受点击；Item*.1点击跳到一个activity；Item*.2点击跳到另一个activity；
+要求使用BaseAdapter
+目的：ListView使用；Adapter如何显示数据（称为显存）；Adapter原理
+要求：
+. 数据类：
+Label {
+    String name;
+}
+Item {
+    String labelName;
+    Strnig name;
+}
+
+细节：做的时候逐渐理解
+
+输出：上面显示
+
+
+
+1.5 在1.4，数据是从DB读出
+目的：sqlite的使用；表的设计；insert数据；select数据；
+要点：
+. CreateTable
+. 第一次启动，初始化，droptable，insert数据
+. 获取数据，select
+. 删除操作，delete
+
+输出，显示跟1.4结果
+
+
+
+1.6 在1.5上，优化，如果Label从20扩展到5000，增加初始化数据btn
+目的：Cursor直出Adapter；繁重操作放到后台；后台与UI如何交互
+
+显示
+Activity1
+ btn_goto_activity2
+ btn_goto_activity3
+ back_to_activity(2|3) 具体是从哪里调进来
+ btn_reset
+Label1
+ Item1.1
+ Item1.2
+ Item1.3
+Label2
+  Item2.1
+  Item2.2
+  Item2.3
+...
+Label5000
+  Item5000.1
+  Item5000.2
+  Item5000.3
+
+问题：如果正在执行select，点击back_to_activity，有什么效果
+
+
