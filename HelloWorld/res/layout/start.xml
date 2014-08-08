@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button 
+        android:id="@+id/btn01"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+        android:text="练习1.1-HelloWorld"
+        />
+    
+    <Button 
+        android:id="@+id/btn02"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+        android:text="练习1.2-Activity生命周期"
+        />
+    
+    <Button 
+        android:id="@+id/btn03"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+        android:text="练习1.3-Activity间切换"
+        />
+     <Button 
+        android:id="@+id/btn04"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+        android:text="练习1.4-listView"
+        />
+      <Button 
+        android:id="@+id/btn05"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+        android:text="练习1.5-db"
+        />
+       <Button 
+        android:id="@+id/btn06"
+        android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+        android:text="练习1.6-Listview优化"
+        />
+</LinearLayout>

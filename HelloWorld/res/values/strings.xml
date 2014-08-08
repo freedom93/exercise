@@ -6,7 +6,7 @@
     <string name="hello_world">QQMail Android</string>
     
     <string name="app_name2">HelloWorld_Activity生命周期</string>
-     <string name="app_btn">MianActivity</string>
+    <string name="app_btn">MianActivity</string>
      
     <string name="title01_name3">Activity01_3个Activity的切换</string>
     <string name="title02_name3">Activity02_3个Activity的切换</string>
@@ -23,5 +23,9 @@
     <string name="a03_btn01">btn_goto_activity1</string>
     <string name="a03_btn02">btn_goto_activity2</string>
     <string name="a03_btn03">back_to_activity(1|2)</string>
+    
+    <string name="app_name4">HelloWorld_ListView</string>
+    <string name="app_name5">HelloWorld_DB</string>
+    <string name="app_name6">HelloWorld_ListView的优化</string>
 
 </resources>
