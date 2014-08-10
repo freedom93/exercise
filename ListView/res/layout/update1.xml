@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="horizontal" >
+    <TextView 
+        android:id="@+id/textupdate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改："
+        android:layout_gravity="center"
+        />
+    <EditText 
+        android:id="@+id/editupdate1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+    
+
+</LinearLayout>
