@@ -1,1 +1,6 @@
 Test 2014-09-17 14:15 By freedom test
+
+for you to fetch changes up to f6b48ae3adf750c720a459fe4c4a908c867ff7c8:
+
+  
+Ref#1 TestGit_fengche (2014-09-17 14:21:40 +0800)
