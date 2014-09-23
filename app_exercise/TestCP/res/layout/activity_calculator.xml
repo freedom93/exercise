@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/body"
+    tools:context=".CalculatorActivity" >
+
+    <TextView
+        android:id="@+id/OutputText"
+        style="@style/tv_output"
+        android:text="0" />
+
+    <LinearLayout
+        style="@style/ll_linear">
+        <Button
+            android:id="@+id/Operate5"
+            style="@style/btn_operand"
+            android:text="c" />
+
+        <Button
+            android:id="@+id/Operate8"
+            style="@style/btn_operand"
+            android:text="±" />
+
+        <Button
+            android:id="@+id/Operate9"
+            style="@style/btn_operand"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/Operate0"
+            style="@style/btn_operate"
+            android:text="÷" />
+    </LinearLayout>
+    
+    <LinearLayout
+        style="@style/ll_linear" >
+        <Button
+            android:id="@+id/Operand7"
+            style="@style/btn_operand"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/Operand8"
+            style="@style/btn_operand"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/Operand9"
+            style="@style/btn_operand"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/Operate1"
+            style="@style/btn_operate"
+            android:text="x" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_linear" >
+
+        <Button
+            android:id="@+id/Operand4"
+            style="@style/btn_operand"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/Operand5"
+            style="@style/btn_operand"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/Operand6"
+            style="@style/btn_operand"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/Operate2"
+            style="@style/btn_operate"
+            android:text="-" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_linear" >
+
+        <Button
+            android:id="@+id/Operand1"
+            style="@style/btn_operand"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/Operand2"
+            style="@style/btn_operand"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/Operand3"
+            style="@style/btn_operand"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/Operate3"
+            style="@style/btn_operate"
+            android:text="+" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_linear" >
+
+        <Button
+            android:id="@+id/Operand0"
+            style="@style/btn_operand"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/Operate7"
+            style="@style/btn_operand"
+            android:text="^" />
+
+        <Button
+            android:id="@+id/Operate6"
+            style="@style/btn_operand"
+            android:text="." />
+
+        <Button
+            android:id="@+id/Operate4"
+            style="@style/btn_operate"
+            android:text="=" />
+    </LinearLayout>
+    
+</LinearLayout>

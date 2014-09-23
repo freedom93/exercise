@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".WeiboTextActivity" >
+
+    <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/image" />
+    <TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textColor="@color/black"
+    android:text="  私密计算器：已加密70个文件，占用内存7.7M."
+    />
+    <LinearLayout
+        style="@style/ll_linear">
+
+        <ImageButton
+            android:id="@+id/picture"
+            style="@style/btn_img"
+            android:src="@drawable/picture" />
+
+        <ImageButton
+            android:id="@+id/video"
+            style="@style/btn_img"
+            android:src="@drawable/picture" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/ll_linear">
+        <ImageButton
+            android:id="@+id/file"
+            style="@style/btn_img"
+            android:src="@drawable/picture"  />
+
+        <ImageButton
+            android:id="@+id/webPage"
+            style="@style/btn_img"
+            android:src="@drawable/picture"  />
+
+    </LinearLayout>
+    
+</LinearLayout>
